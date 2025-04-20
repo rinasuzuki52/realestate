@@ -1,0 +1,36 @@
+//mapモジュール
+@use 'sass:map';
+
+//ブレイクポイント
+$breakpoints: (
+  'pc': 'screen and (min-width: 768px)',
+  'sp': 'screen and (max-width: 767px)',
+  );
+
+//メディアクエリのミックスイン
+@mixin mq($breakpoint) {
+  @media #{map.get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// h2のスタイル
+@mixin section-title {
+  font-size: 3rem;
+  font-weight: ３00;
+  line-height: calc(33 / 30);
+  letter-spacing: 0.28em;
+  color: #4D9600;
+  position: relative;
+  text-align: center;
+  span {
+    display: block;
+    margin-top: 0.6rem;
+    font-size: 2rem;
+    line-height: calc(33 / 20);
+    letter-spacing: 0.2em;
+    color: #000000;
+  }
+}
+
+
