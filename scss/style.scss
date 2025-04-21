@@ -839,7 +839,7 @@ time {
 
 .more-text p::after {
     display: block;
-    content: url(https://test2.rina-suzuki.com/site-1/images/pass.svg);
+    content: url("../images/pass.svg");
     margin-block-start: -2rem;
     transition: transform 0.3s ease;
 
