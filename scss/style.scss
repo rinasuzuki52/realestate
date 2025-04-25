@@ -881,7 +881,7 @@ company
     position: absolute;
     width: 54.3%;
     background-color: $main-color;
-    padding-block: 5rem 3.5rem;
+    padding-block: 4.9rem 4.2rem;
     padding-left: 23.9%;
     padding-right: 0.54%;
     color: $font-color2;
@@ -894,7 +894,7 @@ company
         position: static;
         width: 100%;
         margin-top: 2rem;
-        padding: 2rem 2rem 0.5rem 2rem;
+        padding: 2rem 2rem 1.2rem 2rem;
     }
 }
 .company-name {
@@ -908,66 +908,63 @@ company
     font-size: 1.6rem;
     line-height: calc(25 / 16);
     margin-top: 0.7rem;
-    margin-bottom: 1rem;
     @media (max-width: 860px) and (min-width: 768px) {
         font-size: 1.5rem;
     }
-    @include mixins.mq(sp) {
-        margin-top: 0.6rem;
-    }
 }
 .company-tel {
-    padding-block: 1.2rem;
+    margin-top: 1rem;
     font-size: 1.6rem;
     line-height: calc(25 / 16);
-    pointer-events: none;
 }
+
 .tel-number {
     font-size: 2.6rem;
     line-height: calc(25 / 24);
+    pointer-events: none;
+    padding-inline: 0.5rem;
     @media (max-width: 860px) and (min-width: 768px) {
         font-size: 2.4rem;
     }
-}
-// tel：sp時のホバークリックアクション
-@include mixins.mq(sp) {
-.company-tel {
-    pointer-events: auto;
+    @include mixins.mq(sp) {
+        pointer-events: auto;
+        transition: .5s;
     cursor: pointer;
-}
-.tel-number {
-    transition: .5s;
-}
-.company-tel:hover .tel-number {
+    &:hover {
     opacity: .5;
+    }
 }
 }
 
+
 .company-mail {
-    margin-top: 1rem;
-    padding-block: 0.7rem;
+    margin-top: 1.9rem;
     width: 20rem;
     display: block;
     font-size: 1.6rem;
     line-height: calc(25 / 16);
-    cursor: pointer;
     @media (max-width: 820px) and (min-width: 768px) {
         font-size: 1.5rem;
     }
-}
-
-.company-mail span {
-    font-size: 1.6rem;
-    line-height: calc(25 / 16);
-    transition: .5s;
     @include mixins.mq(sp) {
-        letter-spacing: 0.02em;
+        margin-top: 1.6rem;
     }
 }
 
-.company-mail:hover span {
-    opacity: .5;
+.mail {
+    font-size: 1.6rem;
+    line-height: calc(25 / 16);
+    padding-inline: 1.8rem;
+    transition: .5s;
+    cursor: pointer;
+    @include mixins.mq(sp) {
+        letter-spacing: 0.02em;
+    }
+    &:hover {
+        opacity: .5;
+    }
 }
+
 
  /* --------------
 contact
@@ -1325,7 +1322,6 @@ input[type="submit"] {
 }
 input[type="submit"]:hover {
     color: $main-color;
-    border: 0.1rem solid $main-color;
     background-color: $font-color2;
 }
  /* --------------
