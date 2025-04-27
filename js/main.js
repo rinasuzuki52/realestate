@@ -95,29 +95,6 @@ $(function () {
 });
 
 
-// $(function() {
-//   $('.js_modal_open').on('click', function() {
-//       const id = $(this).attr('data-type');
-//       $('#' + id).addClass('active');
-//       $('.js_modal_area').css('display', 'flex').hide().fadeIn(200); // 修正
-//       $('body').css('overflow', 'hidden'); // 背景スクロールを無効化
-//       $('#page-top-btn').fadeOut(200); // トップへ戻るボタンを非表示
-//       return false;
-//   });
-
-
-//   $('.js_modal_close').on('click', function() {
-//       $('.js_modal_area').fadeOut(200,function() {
-//           $(this).css('display', 'none'); // displayを確実にnoneに戻す
-//       });
-//       $('.js_modal_content').removeClass('active');
-//       $('body').css('overflow', ''); // 背景スクロールを元に戻す
-//       $('#page-top-btn').fadeIn(200); // トップへ戻るボタンを表示
-//       return false;
-//   });
-// });
-
-
 // セレクトボックス
 document.addEventListener("DOMContentLoaded", function() {
   const selectContainer = document.querySelector(".select-container");
